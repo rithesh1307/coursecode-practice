@@ -11,3 +11,17 @@ jobs:
         run: |
           node -v
           npm -v
+  parallel-job:
+    runs-on: macos-latest
+    steps:
+      - name: check sw version
+        run: sw -vers
+  dependent-job:
+    runs-on: windows-latest
+    steps:
+      - name: print a string
+        run: Write-Output "Windows is a Operating System"
+      - name: error step
+        run: thislinedoesntexist
+
+  
