@@ -15,9 +15,10 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: check sw version
-        run: sw -vers
+        run: sw_vers
   dependent-job:
     runs-on: windows-latest
+    needs: run-the-shell-commands
     steps:
       - name: print a string
         run: Write-Output "Windows is a Operating System"
