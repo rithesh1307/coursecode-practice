@@ -14,3 +14,12 @@ jobs:
               run: echo "::warning title=Warning Title=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
             - name: setting notice message with params
               run: echo "::notice title=Notice Title=app.js,line=2,endLine=3,col=5,endColumn=7::Missing Semicolon"
+            - name: group messages
+              run: |
+                echo "::group::My Group Title"
+                echo "Inside Group"
+                echo "::endgroup::"
+            - name: masking a value
+              run: "::add-mask:: Secret value"
+            - name: Echo a secret
+              run: echo "Secret value"
