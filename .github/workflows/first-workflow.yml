@@ -23,6 +23,6 @@ jobs:
       - name: print a string
         run: Write-Output "Windows is a Operating System"
       - name: error step
-        run: thislinedoesntexist
+        run: thislinedoesntexistsss
 
   
