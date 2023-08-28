@@ -8,9 +8,9 @@ jobs:
         run: |
           pwd
           ls -a 
-          $GITHUB_SHA
-          $GITHUB_REPOSITORY
-          $GITHUB_WORKSPACE
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
   display-wd-info-windows:
     runs-on: windows-latest
     steps:
@@ -18,7 +18,7 @@ jobs:
         run: |
           Get-Location
           dir
-          $env:GITHUB_SHA
-          $env:GITHUB_REPOSITORY
-          $env:GITHUB_WORKSPACE
+          echo $env:GITHUB_SHA
+          echo $env:GITHUB_REPOSITORY
+          echo $env:GITHUB_WORKSPACE
 
