@@ -1,0 +1,20 @@
+name: just for practice yaml file
+on: [push, pull_request]
+defaults:
+    run:
+        shell: pwsh
+jobs:
+    this-job-is-to-practice-writing-yamlfile:
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+            shell: bash
+      steps:
+        - name: to display the working directory
+          run: |
+            pwd
+            ls -a
+            echo "$GITHUB_REPOSITORY"
+            echo "$GITHUB_WORKSPACE"
+            
+
